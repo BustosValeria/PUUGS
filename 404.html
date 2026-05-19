@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada - Error 404</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #f8fafc;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulse 2s infinite alternate;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin: 20px 0 10px;
+            font-weight: 600;
+        }
+
+        .message {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn:hover {
+            background: #818cf8;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(129, 140, 248, 0.6);
+        }
+
+        /* Fondo decorativo con círculos */
+        .bg-circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            background: rgba(56, 189, 248, 0.03);
+            border-radius: 50%;
+        }
+
+        .circle-1 { width: 400px; height: 400px; top: -100px; left: -100px; }
+        .circle-2 { width: 600px; height: 600px; bottom: -200px; right: -200px; background: rgba(129, 140, 248, 0.03); }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        @media (max-width: 480px) {
+            .error-code { font-size: 6rem; }
+            .title { font-size: 1.5rem; }
+            .message { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1 class="title">Vaya, te has perdido</h1>
+        <p class="message">La página que estás buscando no existe, ha sido movida o cambió de nombre temporalmente.</p>
+    
+    </div>
+
+</body>
+</html>
